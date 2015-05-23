@@ -297,8 +297,8 @@ module Tinkerpop {
     if (_.isArray(obj)) {
       return _.map(obj, simplifyVertexProperties);
     }
-    assert('type' in obj);
-    assert.strictEqual(obj.type, 'vertex');
+    assert('label' in obj);
+    assert.strictEqual(obj.label, 'vertex');
     obj.properties = _.mapValues(obj.properties, (propValue: any) => {
       var values = _.pluck(propValue, 'value');
       return (values.length === 1) ? values[0] : values;
