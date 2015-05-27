@@ -13,6 +13,7 @@ interface Dictionary {
 function autoImport(shortName: 'GlobFunction'): Java.co.redseal.gremlinnode.function_.GlobFunction.Static;
 function autoImport(shortName: 'GroovyLambda'): Java.co.redseal.gremlinnode.function_.GroovyLambda.Static;
 function autoImport(shortName: 'TestClass'): Java.co.redseal.gremlinnode.testing.TestClass.Static;
+function autoImport(shortName: 'StringInputStream'): Java.co.redseal.util.StringInputStream.Static;
 function autoImport(shortName: 'Binding'): Java.groovy.lang.Binding.Static;
 function autoImport(shortName: 'Closure'): Java.groovy.lang.Closure.Static;
 function autoImport(shortName: 'DelegatingMetaClass'): Java.groovy.lang.DelegatingMetaClass.Static;
@@ -402,6 +403,7 @@ function autoImport(shortName: string): any {
     'GlobFunction': 'co.redseal.gremlinnode.function.GlobFunction',
     'GroovyLambda': 'co.redseal.gremlinnode.function.GroovyLambda',
     'TestClass': 'co.redseal.gremlinnode.testing.TestClass',
+    'StringInputStream': 'co.redseal.util.StringInputStream',
     'Binding': 'groovy.lang.Binding',
     'Closure': 'groovy.lang.Closure',
     'DelegatingMetaClass': 'groovy.lang.DelegatingMetaClass',

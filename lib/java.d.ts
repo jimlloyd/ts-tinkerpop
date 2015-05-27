@@ -94,6 +94,7 @@ declare module Java {
     newArray(className: 'co.redseal.gremlinnode.function.GlobFunction', arg: GlobFunction[]): array_t<co.redseal.gremlinnode.function_.GlobFunction>;
     newArray(className: 'co.redseal.gremlinnode.function.GroovyLambda', arg: GroovyLambda[]): array_t<co.redseal.gremlinnode.function_.GroovyLambda>;
     newArray(className: 'co.redseal.gremlinnode.testing.TestClass', arg: TestClass[]): array_t<co.redseal.gremlinnode.testing.TestClass>;
+    newArray(className: 'co.redseal.util.StringInputStream', arg: StringInputStream[]): array_t<co.redseal.util.StringInputStream>;
     newArray(className: 'groovy.lang.Binding', arg: Binding[]): array_t<groovy.lang.Binding>;
     newArray(className: 'groovy.lang.Closure', arg: Closure[]): array_t<groovy.lang.Closure>;
     newArray(className: 'groovy.lang.DelegatingMetaClass', arg: DelegatingMetaClass[]): array_t<groovy.lang.DelegatingMetaClass>;
@@ -481,6 +482,7 @@ declare module Java {
     import(className: 'co.redseal.gremlinnode.function.GlobFunction'): co.redseal.gremlinnode.function_.GlobFunction.Static;
     import(className: 'co.redseal.gremlinnode.function.GroovyLambda'): co.redseal.gremlinnode.function_.GroovyLambda.Static;
     import(className: 'co.redseal.gremlinnode.testing.TestClass'): co.redseal.gremlinnode.testing.TestClass.Static;
+    import(className: 'co.redseal.util.StringInputStream'): co.redseal.util.StringInputStream.Static;
     import(className: 'groovy.lang.Binding'): groovy.lang.Binding.Static;
     import(className: 'groovy.lang.Closure'): groovy.lang.Closure.Static;
     import(className: 'groovy.lang.DelegatingMetaClass'): groovy.lang.DelegatingMetaClass.Static;
@@ -868,6 +870,7 @@ declare module Java {
     newInstance(className: 'co.redseal.gremlinnode.function.GroovyLambda', arg0: string_t, arg1: ScriptEngine, cb: Callback<GroovyLambda>): void;
     newInstance(className: 'co.redseal.gremlinnode.function.GroovyLambda', arg0: string_t, cb: Callback<GroovyLambda>): void;
     newInstance(className: 'co.redseal.gremlinnode.testing.TestClass', cb: Callback<TestClass>): void;
+    newInstance(className: 'co.redseal.util.StringInputStream', cb: Callback<StringInputStream>): void;
     newInstance(className: 'groovy.lang.Binding', arg0: array_t<string_t>, cb: Callback<Binding>): void;
     newInstance(className: 'groovy.lang.Binding', arg0: Map, cb: Callback<Binding>): void;
     newInstance(className: 'groovy.lang.Binding', cb: Callback<Binding>): void;
@@ -1103,6 +1106,7 @@ declare module Java {
     newInstanceSync(className: 'co.redseal.gremlinnode.function.GroovyLambda', arg0: string_t, arg1: ScriptEngine): GroovyLambda;
     newInstanceSync(className: 'co.redseal.gremlinnode.function.GroovyLambda', arg0: string_t): GroovyLambda;
     newInstanceSync(className: 'co.redseal.gremlinnode.testing.TestClass'): TestClass;
+    newInstanceSync(className: 'co.redseal.util.StringInputStream'): StringInputStream;
     newInstanceSync(className: 'groovy.lang.Binding', arg0: array_t<string_t>): Binding;
     newInstanceSync(className: 'groovy.lang.Binding', arg0: Map): Binding;
     newInstanceSync(className: 'groovy.lang.Binding'): Binding;
@@ -1338,6 +1342,7 @@ declare module Java {
     newInstancePromise(className: 'co.redseal.gremlinnode.function.GroovyLambda', arg0: string_t, arg1: ScriptEngine): Promise<GroovyLambda>;
     newInstancePromise(className: 'co.redseal.gremlinnode.function.GroovyLambda', arg0: string_t): Promise<GroovyLambda>;
     newInstancePromise(className: 'co.redseal.gremlinnode.testing.TestClass'): Promise<TestClass>;
+    newInstancePromise(className: 'co.redseal.util.StringInputStream'): Promise<StringInputStream>;
     newInstancePromise(className: 'groovy.lang.Binding', arg0: array_t<string_t>): Promise<Binding>;
     newInstancePromise(className: 'groovy.lang.Binding', arg0: Map): Promise<Binding>;
     newInstancePromise(className: 'groovy.lang.Binding'): Promise<Binding>;
@@ -1574,6 +1579,7 @@ declare module Java {
   export import GlobFunction = co.redseal.gremlinnode.function_.GlobFunction;
   export import GroovyLambda = co.redseal.gremlinnode.function_.GroovyLambda;
   export import TestClass = co.redseal.gremlinnode.testing.TestClass;
+  export import StringInputStream = co.redseal.util.StringInputStream;
   export import Binding = groovy.lang.Binding;
   export import Closure = groovy.lang.Closure;
   export import DelegatingMetaClass = groovy.lang.DelegatingMetaClass;
@@ -2189,6 +2195,46 @@ declare module Java {
     export module TestClass {
       export interface Static {
         new (): co.redseal.gremlinnode.testing.TestClass;
+      }
+    }
+  }
+
+  export module co.redseal.util {
+    export interface StringInputStream extends Java.java.lang.Object {
+      // public boolean java.lang.Object.equals(java.lang.Object)
+      equals(arg0: object_t): boolean;
+      equalsP(arg0: object_t): Promise<boolean>;
+      // public final native java.lang.Class<?> java.lang.Object.getClass()
+      getClass(): Class;
+      getClassP(): Promise<Class>;
+      // public native int java.lang.Object.hashCode()
+      hashCode(): number;
+      hashCodeP(): Promise<number>;
+      // public final native void java.lang.Object.notify()
+      notify(): void;
+      notifyP(): Promise<void>;
+      // public final native void java.lang.Object.notifyAll()
+      notifyAll(): void;
+      notifyAllP(): Promise<void>;
+      // public java.lang.String java.lang.Object.toString()
+      toString(): string;
+      toStringP(): Promise<string>;
+      // public final void java.lang.Object.wait(long,int) throws java.lang.InterruptedException
+      wait(arg0: long_t, arg1: integer_t): void;
+      waitP(arg0: long_t, arg1: integer_t): Promise<void>;
+      // public final native void java.lang.Object.wait(long) throws java.lang.InterruptedException
+      wait(arg0: long_t): void;
+      waitP(arg0: long_t): Promise<void>;
+      // public final void java.lang.Object.wait() throws java.lang.InterruptedException
+      wait(): void;
+      waitP(): Promise<void>;
+    }
+    export module StringInputStream {
+      export interface Static {
+        new (): co.redseal.util.StringInputStream;
+        // public static java.io.InputStream co.redseal.util.StringInputStream.from(java.lang.String)
+        from(arg0: string_t): InputStream;
+        fromP(arg0: string_t): Promise<InputStream>;
       }
     }
   }
