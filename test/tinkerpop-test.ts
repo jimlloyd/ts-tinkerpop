@@ -654,8 +654,7 @@ describe('GraphSON support', () => {
     });
   });
 
-  // TODO: Update handling of "pretty" GraphSON due to changes between M8 & M9
-  it.skip('can save and load "pretty" GraphSON synchronously', (done: MochaDone): void => {
+  it('can save and load "pretty" GraphSON synchronously', (done: MochaDone): void => {
     tmp.tmpName((err: any, path: string): void => {
       if (err) {
         // A failure in tmpName is not a failure in gremlin-node.
@@ -664,7 +663,7 @@ describe('GraphSON support', () => {
       }
       expect(TP.savePrettyGraphSONSync(g, path), 'savePrettyGraphSONSync did not return graph').to.deep.equal(g);
       var g2: Java.Graph = makeEmptyTinker();
-      expect(TP.loadGraphSONSync(g2, path), 'loadGraphSONSync did not return graph').to.deep.equal(g2);
+      expect(TP.loadPrettyGraphSONSync(g2, path), 'loadPrettyGraphSONSync did not return graph').to.deep.equal(g2);
       var str: string = g2.toString();
       var expected: string = 'tinkergraph[vertices:6 edges:6]';
       expect(str, 'GraphSON was not read correctly').to.deep.equal(expected);
@@ -696,8 +695,7 @@ describe('GraphSON support', () => {
     });
   });
 
-  // TODO: Update handling of "pretty" GraphSON due to changes between M8 & M9
-  it.skip('can save and load "pretty" GraphSON asynchronously via callback', (done: MochaDone): void => {
+  it('can save and load "pretty" GraphSON asynchronously via callback', (done: MochaDone): void => {
     tmp.tmpName((err: any, path: string): void => {
       if (err) {
         // A failure in tmpName is not a failure in gremlin-node.
@@ -709,7 +707,7 @@ describe('GraphSON support', () => {
         expect(g, 'saveGraphSON did not return graph').to.deep.equal(graph);
 
         var g2: Java.Graph = makeEmptyTinker();
-        TP.loadGraphSON(g2, path, (err: Error, graph: Java.Graph): void => {
+        TP.loadPrettyGraphSON(g2, path, (err: Error, graph: Java.Graph): void => {
           expect(err).to.not.exist;
           expect(g2, 'loadGraphSON did not return graph').to.deep.equal(graph);
           var str: string = g2.toString();
@@ -746,8 +744,7 @@ describe('GraphSON support', () => {
       });
   });
 
-  // TODO: Update handling of "pretty" GraphSON due to changes between M8 & M9
-  it.skip('can save and load "pretty" GraphSON asynchronously via promise', (): BluePromise<void> => {
+  it('can save and load "pretty" GraphSON asynchronously via promise', (): BluePromise<void> => {
     var tmpNameP = BluePromise.promisify(tmp.tmpName);
     var g2: Java.Graph;
     var path: string;
@@ -759,7 +756,7 @@ describe('GraphSON support', () => {
       .then((graph: Java.Graph): BluePromise<Java.Graph> => {
         expect(g, 'savePrettyGraphSON did not return graph').to.deep.equal(graph);
         g2 = makeEmptyTinker();
-        return TP.loadGraphSON(g2, path);
+        return TP.loadPrettyGraphSON(g2, path);
       })
       .then((graph: Java.Graph): BluePromise<void> => {
         expect(g2, 'loadGraphSON did not return graph').to.deep.equal(graph);
