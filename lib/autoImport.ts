@@ -146,6 +146,7 @@ function autoImport(shortName: 'Order'): Java.org.apache.tinkerpop.gremlin.proce
 function autoImport(shortName: 'P'): Java.org.apache.tinkerpop.gremlin.process.traversal.P.Static;
 function autoImport(shortName: 'Path'): Java.org.apache.tinkerpop.gremlin.process.traversal.Path.Static;
 function autoImport(shortName: 'Path$Exceptions'): Java.org.apache.tinkerpop.gremlin.process.traversal.Path$Exceptions.Static;
+function autoImport(shortName: 'Pop'): Java.org.apache.tinkerpop.gremlin.process.traversal.Pop.Static;
 function autoImport(shortName: 'Scope'): Java.org.apache.tinkerpop.gremlin.process.traversal.Scope.Static;
 function autoImport(shortName: 'Step'): Java.org.apache.tinkerpop.gremlin.process.traversal.Step.Static;
 function autoImport(shortName: 'AbstractStep'): Java.org.apache.tinkerpop.gremlin.process.traversal.step.util.AbstractStep.Static;
@@ -175,7 +176,10 @@ function autoImport(shortName: 'ElementIdStrategy'): Java.org.apache.tinkerpop.g
 function autoImport(shortName: 'ElementIdStrategy$Builder'): Java.org.apache.tinkerpop.gremlin.process.traversal.strategy.decoration.ElementIdStrategy$Builder.Static;
 function autoImport(shortName: 'EventStrategy'): Java.org.apache.tinkerpop.gremlin.process.traversal.strategy.decoration.EventStrategy.Static;
 function autoImport(shortName: 'EventStrategy$Builder'): Java.org.apache.tinkerpop.gremlin.process.traversal.strategy.decoration.EventStrategy$Builder.Static;
+function autoImport(shortName: 'EventStrategy$DefaultEventQueue'): Java.org.apache.tinkerpop.gremlin.process.traversal.strategy.decoration.EventStrategy$DefaultEventQueue.Static;
+function autoImport(shortName: 'EventStrategy$EventQueue'): Java.org.apache.tinkerpop.gremlin.process.traversal.strategy.decoration.EventStrategy$EventQueue.Static;
 function autoImport(shortName: 'EventStrategy$EventStrategyCallback'): Java.org.apache.tinkerpop.gremlin.process.traversal.strategy.decoration.EventStrategy$EventStrategyCallback.Static;
+function autoImport(shortName: 'EventStrategy$TransactionalEventQueue'): Java.org.apache.tinkerpop.gremlin.process.traversal.strategy.decoration.EventStrategy$TransactionalEventQueue.Static;
 function autoImport(shortName: 'PartitionStrategy'): Java.org.apache.tinkerpop.gremlin.process.traversal.strategy.decoration.PartitionStrategy.Static;
 function autoImport(shortName: 'PartitionStrategy$Builder'): Java.org.apache.tinkerpop.gremlin.process.traversal.strategy.decoration.PartitionStrategy$Builder.Static;
 function autoImport(shortName: 'SubgraphStrategy'): Java.org.apache.tinkerpop.gremlin.process.traversal.strategy.decoration.SubgraphStrategy.Static;
@@ -227,12 +231,10 @@ function autoImport(shortName: 'TraversalHelper'): Java.org.apache.tinkerpop.gre
 function autoImport(shortName: 'TraversalMatrix'): Java.org.apache.tinkerpop.gremlin.process.traversal.util.TraversalMatrix.Static;
 function autoImport(shortName: 'TraversalMetrics'): Java.org.apache.tinkerpop.gremlin.process.traversal.util.TraversalMetrics.Static;
 function autoImport(shortName: 'TraversalObjectFunction'): Java.org.apache.tinkerpop.gremlin.process.traversal.util.TraversalObjectFunction.Static;
-function autoImport(shortName: 'TraversalP'): Java.org.apache.tinkerpop.gremlin.process.traversal.util.TraversalP.Static;
 function autoImport(shortName: 'TraversalRing'): Java.org.apache.tinkerpop.gremlin.process.traversal.util.TraversalRing.Static;
 function autoImport(shortName: 'TraversalScriptFunction'): Java.org.apache.tinkerpop.gremlin.process.traversal.util.TraversalScriptFunction.Static;
 function autoImport(shortName: 'TraversalScriptHelper'): Java.org.apache.tinkerpop.gremlin.process.traversal.util.TraversalScriptHelper.Static;
 function autoImport(shortName: 'TraversalUtil'): Java.org.apache.tinkerpop.gremlin.process.traversal.util.TraversalUtil.Static;
-function autoImport(shortName: 'TraversalUtil$Multiple'): Java.org.apache.tinkerpop.gremlin.process.traversal.util.TraversalUtil$Multiple.Static;
 function autoImport(shortName: 'Direction'): Java.org.apache.tinkerpop.gremlin.structure.Direction.Static;
 function autoImport(shortName: 'Edge'): Java.org.apache.tinkerpop.gremlin.structure.Edge.Static;
 function autoImport(shortName: 'Edge$Exceptions'): Java.org.apache.tinkerpop.gremlin.structure.Edge$Exceptions.Static;
@@ -284,7 +286,7 @@ function autoImport(shortName: 'GraphSONWriter'): Java.org.apache.tinkerpop.grem
 function autoImport(shortName: 'GraphSONWriter$Builder'): Java.org.apache.tinkerpop.gremlin.structure.io.graphson.GraphSONWriter$Builder.Static;
 function autoImport(shortName: 'LegacyGraphSONReader'): Java.org.apache.tinkerpop.gremlin.structure.io.graphson.LegacyGraphSONReader.Static;
 function autoImport(shortName: 'LegacyGraphSONReader$Builder'): Java.org.apache.tinkerpop.gremlin.structure.io.graphson.LegacyGraphSONReader$Builder.Static;
-function autoImport(shortName: 'LegacyGraphSONReader$GraphSONTokens'): Java.org.apache.tinkerpop.gremlin.structure.io.graphson.LegacyGraphSONReader$GraphSONTokens.Static;
+function autoImport(shortName: 'LegacyGraphSONReader$GraphSONTokensTP2'): Java.org.apache.tinkerpop.gremlin.structure.io.graphson.LegacyGraphSONReader$GraphSONTokensTP2.Static;
 function autoImport(shortName: 'GraphWriter'): Java.org.apache.tinkerpop.gremlin.structure.io.GraphWriter.Static;
 function autoImport(shortName: 'GraphWriter$WriterBuilder'): Java.org.apache.tinkerpop.gremlin.structure.io.GraphWriter$WriterBuilder.Static;
 function autoImport(shortName: 'GryoIo'): Java.org.apache.tinkerpop.gremlin.structure.io.gryo.GryoIo.Static;
@@ -340,9 +342,8 @@ function autoImport(shortName: 'Vertex$Exceptions'): Java.org.apache.tinkerpop.g
 function autoImport(shortName: 'VertexProperty'): Java.org.apache.tinkerpop.gremlin.structure.VertexProperty.Static;
 function autoImport(shortName: 'VertexProperty$Cardinality'): Java.org.apache.tinkerpop.gremlin.structure.VertexProperty$Cardinality.Static;
 function autoImport(shortName: 'VertexProperty$Exceptions'): Java.org.apache.tinkerpop.gremlin.structure.VertexProperty$Exceptions.Static;
-function autoImport(shortName: 'TinkerComputerResult'): Java.org.apache.tinkerpop.gremlin.tinkergraph.process.computer.TinkerComputerResult.Static;
 function autoImport(shortName: 'TinkerGraphComputer'): Java.org.apache.tinkerpop.gremlin.tinkergraph.process.computer.TinkerGraphComputer.Static;
-function autoImport(shortName: 'TinkerGraphView'): Java.org.apache.tinkerpop.gremlin.tinkergraph.process.computer.TinkerGraphView.Static;
+function autoImport(shortName: 'TinkerGraphComputerView'): Java.org.apache.tinkerpop.gremlin.tinkergraph.process.computer.TinkerGraphComputerView.Static;
 function autoImport(shortName: 'TinkerMapEmitter'): Java.org.apache.tinkerpop.gremlin.tinkergraph.process.computer.TinkerMapEmitter.Static;
 function autoImport(shortName: 'TinkerMemory'): Java.org.apache.tinkerpop.gremlin.tinkergraph.process.computer.TinkerMemory.Static;
 function autoImport(shortName: 'TinkerMessenger'): Java.org.apache.tinkerpop.gremlin.tinkergraph.process.computer.TinkerMessenger.Static;
@@ -358,6 +359,7 @@ function autoImport(shortName: 'TinkerGraph$TinkerGraphEdgeFeatures'): Java.org.
 function autoImport(shortName: 'TinkerGraph$TinkerGraphFeatures'): Java.org.apache.tinkerpop.gremlin.tinkergraph.structure.TinkerGraph$TinkerGraphFeatures.Static;
 function autoImport(shortName: 'TinkerGraph$TinkerGraphGraphFeatures'): Java.org.apache.tinkerpop.gremlin.tinkergraph.structure.TinkerGraph$TinkerGraphGraphFeatures.Static;
 function autoImport(shortName: 'TinkerGraph$TinkerGraphVertexFeatures'): Java.org.apache.tinkerpop.gremlin.tinkergraph.structure.TinkerGraph$TinkerGraphVertexFeatures.Static;
+function autoImport(shortName: 'TinkerGraph$TinkerGraphVertexPropertyFeatures'): Java.org.apache.tinkerpop.gremlin.tinkergraph.structure.TinkerGraph$TinkerGraphVertexPropertyFeatures.Static;
 function autoImport(shortName: 'TinkerGraphVariables'): Java.org.apache.tinkerpop.gremlin.tinkergraph.structure.TinkerGraphVariables.Static;
 function autoImport(shortName: 'TinkerHelper'): Java.org.apache.tinkerpop.gremlin.tinkergraph.structure.TinkerHelper.Static;
 function autoImport(shortName: 'TinkerProperty'): Java.org.apache.tinkerpop.gremlin.tinkergraph.structure.TinkerProperty.Static;
@@ -532,6 +534,7 @@ function autoImport(shortName: string): any {
     'P': 'org.apache.tinkerpop.gremlin.process.traversal.P',
     'Path': 'org.apache.tinkerpop.gremlin.process.traversal.Path',
     'Path$Exceptions': 'org.apache.tinkerpop.gremlin.process.traversal.Path$Exceptions',
+    'Pop': 'org.apache.tinkerpop.gremlin.process.traversal.Pop',
     'Scope': 'org.apache.tinkerpop.gremlin.process.traversal.Scope',
     'Step': 'org.apache.tinkerpop.gremlin.process.traversal.Step',
     'AbstractStep': 'org.apache.tinkerpop.gremlin.process.traversal.step.util.AbstractStep',
@@ -561,7 +564,10 @@ function autoImport(shortName: string): any {
     'ElementIdStrategy$Builder': 'org.apache.tinkerpop.gremlin.process.traversal.strategy.decoration.ElementIdStrategy$Builder',
     'EventStrategy': 'org.apache.tinkerpop.gremlin.process.traversal.strategy.decoration.EventStrategy',
     'EventStrategy$Builder': 'org.apache.tinkerpop.gremlin.process.traversal.strategy.decoration.EventStrategy$Builder',
+    'EventStrategy$DefaultEventQueue': 'org.apache.tinkerpop.gremlin.process.traversal.strategy.decoration.EventStrategy$DefaultEventQueue',
+    'EventStrategy$EventQueue': 'org.apache.tinkerpop.gremlin.process.traversal.strategy.decoration.EventStrategy$EventQueue',
     'EventStrategy$EventStrategyCallback': 'org.apache.tinkerpop.gremlin.process.traversal.strategy.decoration.EventStrategy$EventStrategyCallback',
+    'EventStrategy$TransactionalEventQueue': 'org.apache.tinkerpop.gremlin.process.traversal.strategy.decoration.EventStrategy$TransactionalEventQueue',
     'PartitionStrategy': 'org.apache.tinkerpop.gremlin.process.traversal.strategy.decoration.PartitionStrategy',
     'PartitionStrategy$Builder': 'org.apache.tinkerpop.gremlin.process.traversal.strategy.decoration.PartitionStrategy$Builder',
     'SubgraphStrategy': 'org.apache.tinkerpop.gremlin.process.traversal.strategy.decoration.SubgraphStrategy',
@@ -613,12 +619,10 @@ function autoImport(shortName: string): any {
     'TraversalMatrix': 'org.apache.tinkerpop.gremlin.process.traversal.util.TraversalMatrix',
     'TraversalMetrics': 'org.apache.tinkerpop.gremlin.process.traversal.util.TraversalMetrics',
     'TraversalObjectFunction': 'org.apache.tinkerpop.gremlin.process.traversal.util.TraversalObjectFunction',
-    'TraversalP': 'org.apache.tinkerpop.gremlin.process.traversal.util.TraversalP',
     'TraversalRing': 'org.apache.tinkerpop.gremlin.process.traversal.util.TraversalRing',
     'TraversalScriptFunction': 'org.apache.tinkerpop.gremlin.process.traversal.util.TraversalScriptFunction',
     'TraversalScriptHelper': 'org.apache.tinkerpop.gremlin.process.traversal.util.TraversalScriptHelper',
     'TraversalUtil': 'org.apache.tinkerpop.gremlin.process.traversal.util.TraversalUtil',
-    'TraversalUtil$Multiple': 'org.apache.tinkerpop.gremlin.process.traversal.util.TraversalUtil$Multiple',
     'Direction': 'org.apache.tinkerpop.gremlin.structure.Direction',
     'Edge': 'org.apache.tinkerpop.gremlin.structure.Edge',
     'Edge$Exceptions': 'org.apache.tinkerpop.gremlin.structure.Edge$Exceptions',
@@ -670,7 +674,7 @@ function autoImport(shortName: string): any {
     'GraphSONWriter$Builder': 'org.apache.tinkerpop.gremlin.structure.io.graphson.GraphSONWriter$Builder',
     'LegacyGraphSONReader': 'org.apache.tinkerpop.gremlin.structure.io.graphson.LegacyGraphSONReader',
     'LegacyGraphSONReader$Builder': 'org.apache.tinkerpop.gremlin.structure.io.graphson.LegacyGraphSONReader$Builder',
-    'LegacyGraphSONReader$GraphSONTokens': 'org.apache.tinkerpop.gremlin.structure.io.graphson.LegacyGraphSONReader$GraphSONTokens',
+    'LegacyGraphSONReader$GraphSONTokensTP2': 'org.apache.tinkerpop.gremlin.structure.io.graphson.LegacyGraphSONReader$GraphSONTokensTP2',
     'GraphWriter': 'org.apache.tinkerpop.gremlin.structure.io.GraphWriter',
     'GraphWriter$WriterBuilder': 'org.apache.tinkerpop.gremlin.structure.io.GraphWriter$WriterBuilder',
     'GryoIo': 'org.apache.tinkerpop.gremlin.structure.io.gryo.GryoIo',
@@ -726,9 +730,8 @@ function autoImport(shortName: string): any {
     'VertexProperty': 'org.apache.tinkerpop.gremlin.structure.VertexProperty',
     'VertexProperty$Cardinality': 'org.apache.tinkerpop.gremlin.structure.VertexProperty$Cardinality',
     'VertexProperty$Exceptions': 'org.apache.tinkerpop.gremlin.structure.VertexProperty$Exceptions',
-    'TinkerComputerResult': 'org.apache.tinkerpop.gremlin.tinkergraph.process.computer.TinkerComputerResult',
     'TinkerGraphComputer': 'org.apache.tinkerpop.gremlin.tinkergraph.process.computer.TinkerGraphComputer',
-    'TinkerGraphView': 'org.apache.tinkerpop.gremlin.tinkergraph.process.computer.TinkerGraphView',
+    'TinkerGraphComputerView': 'org.apache.tinkerpop.gremlin.tinkergraph.process.computer.TinkerGraphComputerView',
     'TinkerMapEmitter': 'org.apache.tinkerpop.gremlin.tinkergraph.process.computer.TinkerMapEmitter',
     'TinkerMemory': 'org.apache.tinkerpop.gremlin.tinkergraph.process.computer.TinkerMemory',
     'TinkerMessenger': 'org.apache.tinkerpop.gremlin.tinkergraph.process.computer.TinkerMessenger',
@@ -744,6 +747,7 @@ function autoImport(shortName: string): any {
     'TinkerGraph$TinkerGraphFeatures': 'org.apache.tinkerpop.gremlin.tinkergraph.structure.TinkerGraph$TinkerGraphFeatures',
     'TinkerGraph$TinkerGraphGraphFeatures': 'org.apache.tinkerpop.gremlin.tinkergraph.structure.TinkerGraph$TinkerGraphGraphFeatures',
     'TinkerGraph$TinkerGraphVertexFeatures': 'org.apache.tinkerpop.gremlin.tinkergraph.structure.TinkerGraph$TinkerGraphVertexFeatures',
+    'TinkerGraph$TinkerGraphVertexPropertyFeatures': 'org.apache.tinkerpop.gremlin.tinkergraph.structure.TinkerGraph$TinkerGraphVertexPropertyFeatures',
     'TinkerGraphVariables': 'org.apache.tinkerpop.gremlin.tinkergraph.structure.TinkerGraphVariables',
     'TinkerHelper': 'org.apache.tinkerpop.gremlin.tinkergraph.structure.TinkerHelper',
     'TinkerProperty': 'org.apache.tinkerpop.gremlin.tinkergraph.structure.TinkerProperty',
