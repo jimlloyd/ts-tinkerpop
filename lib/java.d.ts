@@ -10421,12 +10421,16 @@ declare module Java {
         // public static <A> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal<A, A> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.__.cyclicPath()
         cyclicPath(): GraphTraversal;
         cyclicPathP(): Promise<GraphTraversal>;
-        // public static <A> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal<A, A> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.__.dedup(org.apache.tinkerpop.gremlin.process.traversal.Scope)
-        dedup(arg0: Scope): GraphTraversal;
-        dedupP(arg0: Scope): Promise<GraphTraversal>;
-        // public static <A> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal<A, A> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.__.dedup()
-        dedup(): GraphTraversal;
-        dedupP(): Promise<GraphTraversal>;
+        // public static <A> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal<A, A> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.__.dedup(org.apache.tinkerpop.gremlin.process.traversal.Scope,java.lang.String...)
+        dedup(arg0: Scope, ...arg1: string_t[]): GraphTraversal;
+        dedup(arg0: Scope, arg1: array_t<string_t>): GraphTraversal;
+        dedupP(arg0: Scope, ...arg1: string_t[]): Promise<GraphTraversal>;
+        dedupP(arg0: Scope, arg1: array_t<string_t>): Promise<GraphTraversal>;
+        // public static <A> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal<A, A> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.__.dedup(java.lang.String...)
+        dedup(...arg0: string_t[]): GraphTraversal;
+        dedup(arg0: array_t<string_t>): GraphTraversal;
+        dedupP(...arg0: string_t[]): Promise<GraphTraversal>;
+        dedupP(arg0: array_t<string_t>): Promise<GraphTraversal>;
         // public static <A> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal<A, A> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.__.drop()
         drop(): GraphTraversal;
         dropP(): Promise<GraphTraversal>;
@@ -10567,11 +10571,6 @@ declare module Java {
         // public static <A,B> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal<A, B> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.__.map(java.util.function.Function<org.apache.tinkerpop.gremlin.process.traversal.Traverser<A>, B>)
         map(arg0: Function): GraphTraversal;
         mapP(arg0: Function): Promise<GraphTraversal>;
-        // public static <A,B> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal<A, java.util.Map<java.lang.String, B>> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.__.match(java.lang.String,org.apache.tinkerpop.gremlin.process.traversal.Traversal<?, ?>...)
-        match(arg0: string_t, ...arg1: Traversal[]): GraphTraversal;
-        match(arg0: string_t, arg1: array_t<Traversal>): GraphTraversal;
-        matchP(arg0: string_t, ...arg1: Traversal[]): Promise<GraphTraversal>;
-        matchP(arg0: string_t, arg1: array_t<Traversal>): Promise<GraphTraversal>;
         // public static <A,B> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal<A, java.util.Map<java.lang.String, B>> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.__.match(org.apache.tinkerpop.gremlin.process.traversal.Traversal<?, ?>...)
         match(...arg0: Traversal[]): GraphTraversal;
         match(arg0: array_t<Traversal>): GraphTraversal;
@@ -10993,12 +10992,16 @@ declare module Java {
       // public default org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal<S, E> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal.cyclicPath()
       cyclicPath(): GraphTraversal;
       cyclicPathP(): Promise<GraphTraversal>;
-      // public default org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal<S, E> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal.dedup(org.apache.tinkerpop.gremlin.process.traversal.Scope)
-      dedup(arg0: Scope): GraphTraversal;
-      dedupP(arg0: Scope): Promise<GraphTraversal>;
-      // public default org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal<S, E> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal.dedup()
-      dedup(): GraphTraversal;
-      dedupP(): Promise<GraphTraversal>;
+      // public default org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal<S, E> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal.dedup(org.apache.tinkerpop.gremlin.process.traversal.Scope,java.lang.String...)
+      dedup(arg0: Scope, ...arg1: string_t[]): GraphTraversal;
+      dedup(arg0: Scope, arg1: array_t<string_t>): GraphTraversal;
+      dedupP(arg0: Scope, ...arg1: string_t[]): Promise<GraphTraversal>;
+      dedupP(arg0: Scope, arg1: array_t<string_t>): Promise<GraphTraversal>;
+      // public default org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal<S, E> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal.dedup(java.lang.String...)
+      dedup(...arg0: string_t[]): GraphTraversal;
+      dedup(arg0: array_t<string_t>): GraphTraversal;
+      dedupP(...arg0: string_t[]): Promise<GraphTraversal>;
+      dedupP(arg0: array_t<string_t>): Promise<GraphTraversal>;
       // public default org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal<S, E> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal.drop()
       drop(): GraphTraversal;
       dropP(): Promise<GraphTraversal>;
@@ -11202,11 +11205,6 @@ declare module Java {
       // public default <E2> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal<S, E2> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal.map(java.util.function.Function<org.apache.tinkerpop.gremlin.process.traversal.Traverser<E>, E2>)
       map(arg0: Function): GraphTraversal;
       mapP(arg0: Function): Promise<GraphTraversal>;
-      // public default <E2> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal<S, java.util.Map<java.lang.String, E2>> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal.match(java.lang.String,org.apache.tinkerpop.gremlin.process.traversal.Traversal<?, ?>...)
-      match(arg0: string_t, ...arg1: Traversal[]): GraphTraversal;
-      match(arg0: string_t, arg1: array_t<Traversal>): GraphTraversal;
-      matchP(arg0: string_t, ...arg1: Traversal[]): Promise<GraphTraversal>;
-      matchP(arg0: string_t, arg1: array_t<Traversal>): Promise<GraphTraversal>;
       // public default <E2> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal<S, java.util.Map<java.lang.String, E2>> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal.match(org.apache.tinkerpop.gremlin.process.traversal.Traversal<?, ?>...)
       match(...arg0: Traversal[]): GraphTraversal;
       match(arg0: array_t<Traversal>): GraphTraversal;
@@ -11445,6 +11443,9 @@ declare module Java {
       // public default java.util.Set<E> org.apache.tinkerpop.gremlin.process.traversal.Traversal.toSet()
       toSet(): Set;
       toSetP(): Promise<Set>;
+      // public default java.util.stream.Stream<E> org.apache.tinkerpop.gremlin.process.traversal.Traversal.toStream()
+      toStream(): object_t;
+      toStreamP(): Promise<object_t>;
       // public java.lang.String java.lang.Object.toString()
       toString(): string;
       toStringP(): Promise<string>;
@@ -11699,12 +11700,16 @@ declare module Java {
       // public default org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal<S, E> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal.cyclicPath()
       cyclicPath(): GraphTraversal;
       cyclicPathP(): Promise<GraphTraversal>;
-      // public default org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal<S, E> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal.dedup(org.apache.tinkerpop.gremlin.process.traversal.Scope)
-      dedup(arg0: Scope): GraphTraversal;
-      dedupP(arg0: Scope): Promise<GraphTraversal>;
-      // public default org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal<S, E> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal.dedup()
-      dedup(): GraphTraversal;
-      dedupP(): Promise<GraphTraversal>;
+      // public default org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal<S, E> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal.dedup(org.apache.tinkerpop.gremlin.process.traversal.Scope,java.lang.String...)
+      dedup(arg0: Scope, ...arg1: string_t[]): GraphTraversal;
+      dedup(arg0: Scope, arg1: array_t<string_t>): GraphTraversal;
+      dedupP(arg0: Scope, ...arg1: string_t[]): Promise<GraphTraversal>;
+      dedupP(arg0: Scope, arg1: array_t<string_t>): Promise<GraphTraversal>;
+      // public default org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal<S, E> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal.dedup(java.lang.String...)
+      dedup(...arg0: string_t[]): GraphTraversal;
+      dedup(arg0: array_t<string_t>): GraphTraversal;
+      dedupP(...arg0: string_t[]): Promise<GraphTraversal>;
+      dedupP(arg0: array_t<string_t>): Promise<GraphTraversal>;
       // public default org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal<S, E> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal.drop()
       drop(): GraphTraversal;
       dropP(): Promise<GraphTraversal>;
@@ -11908,11 +11913,6 @@ declare module Java {
       // public default <E2> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal<S, E2> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal.map(java.util.function.Function<org.apache.tinkerpop.gremlin.process.traversal.Traverser<E>, E2>)
       map(arg0: Function): GraphTraversal;
       mapP(arg0: Function): Promise<GraphTraversal>;
-      // public default <E2> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal<S, java.util.Map<java.lang.String, E2>> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal.match(java.lang.String,org.apache.tinkerpop.gremlin.process.traversal.Traversal<?, ?>...)
-      match(arg0: string_t, ...arg1: Traversal[]): GraphTraversal;
-      match(arg0: string_t, arg1: array_t<Traversal>): GraphTraversal;
-      matchP(arg0: string_t, ...arg1: Traversal[]): Promise<GraphTraversal>;
-      matchP(arg0: string_t, arg1: array_t<Traversal>): Promise<GraphTraversal>;
       // public default <E2> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal<S, java.util.Map<java.lang.String, E2>> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal.match(org.apache.tinkerpop.gremlin.process.traversal.Traversal<?, ?>...)
       match(...arg0: Traversal[]): GraphTraversal;
       match(arg0: array_t<Traversal>): GraphTraversal;
@@ -12151,6 +12151,9 @@ declare module Java {
       // public default java.util.Set<E> org.apache.tinkerpop.gremlin.process.traversal.Traversal.toSet()
       toSet(): Set;
       toSetP(): Promise<Set>;
+      // public default java.util.stream.Stream<E> org.apache.tinkerpop.gremlin.process.traversal.Traversal.toStream()
+      toStream(): object_t;
+      toStreamP(): Promise<object_t>;
       // public java.lang.String java.lang.Object.toString()
       toString(): string;
       toStringP(): Promise<string>;
@@ -12376,12 +12379,16 @@ declare module Java {
       // public default org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal<S, E> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal.cyclicPath()
       cyclicPath(): GraphTraversal;
       cyclicPathP(): Promise<GraphTraversal>;
-      // public default org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal<S, E> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal.dedup(org.apache.tinkerpop.gremlin.process.traversal.Scope)
-      dedup(arg0: Scope): GraphTraversal;
-      dedupP(arg0: Scope): Promise<GraphTraversal>;
-      // public default org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal<S, E> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal.dedup()
-      dedup(): GraphTraversal;
-      dedupP(): Promise<GraphTraversal>;
+      // public default org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal<S, E> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal.dedup(org.apache.tinkerpop.gremlin.process.traversal.Scope,java.lang.String...)
+      dedup(arg0: Scope, ...arg1: string_t[]): GraphTraversal;
+      dedup(arg0: Scope, arg1: array_t<string_t>): GraphTraversal;
+      dedupP(arg0: Scope, ...arg1: string_t[]): Promise<GraphTraversal>;
+      dedupP(arg0: Scope, arg1: array_t<string_t>): Promise<GraphTraversal>;
+      // public default org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal<S, E> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal.dedup(java.lang.String...)
+      dedup(...arg0: string_t[]): GraphTraversal;
+      dedup(arg0: array_t<string_t>): GraphTraversal;
+      dedupP(...arg0: string_t[]): Promise<GraphTraversal>;
+      dedupP(arg0: array_t<string_t>): Promise<GraphTraversal>;
       // public default org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal<S, E> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal.drop()
       drop(): GraphTraversal;
       dropP(): Promise<GraphTraversal>;
@@ -12540,11 +12547,6 @@ declare module Java {
       // public default <E2> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal<S, E2> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal.map(java.util.function.Function<org.apache.tinkerpop.gremlin.process.traversal.Traverser<E>, E2>)
       map(arg0: Function): GraphTraversal;
       mapP(arg0: Function): Promise<GraphTraversal>;
-      // public default <E2> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal<S, java.util.Map<java.lang.String, E2>> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal.match(java.lang.String,org.apache.tinkerpop.gremlin.process.traversal.Traversal<?, ?>...)
-      match(arg0: string_t, ...arg1: Traversal[]): GraphTraversal;
-      match(arg0: string_t, arg1: array_t<Traversal>): GraphTraversal;
-      matchP(arg0: string_t, ...arg1: Traversal[]): Promise<GraphTraversal>;
-      matchP(arg0: string_t, arg1: array_t<Traversal>): Promise<GraphTraversal>;
       // public default <E2> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal<S, java.util.Map<java.lang.String, E2>> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal.match(org.apache.tinkerpop.gremlin.process.traversal.Traversal<?, ?>...)
       match(...arg0: Traversal[]): GraphTraversal;
       match(arg0: array_t<Traversal>): GraphTraversal;
@@ -12753,6 +12755,9 @@ declare module Java {
       // public default java.util.Set<E> org.apache.tinkerpop.gremlin.process.traversal.Traversal.toSet()
       toSet(): Set;
       toSetP(): Promise<Set>;
+      // public default java.util.stream.Stream<E> org.apache.tinkerpop.gremlin.process.traversal.Traversal.toStream()
+      toStream(): object_t;
+      toStreamP(): Promise<object_t>;
       // public default org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal<S, org.apache.tinkerpop.gremlin.structure.Vertex> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal.toV(org.apache.tinkerpop.gremlin.structure.Direction)
       toV(arg0: Direction): GraphTraversal;
       toVP(arg0: Direction): Promise<GraphTraversal>;
@@ -12984,12 +12989,16 @@ declare module Java {
       // public default org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal<S, E> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal.cyclicPath()
       cyclicPath(): GraphTraversal;
       cyclicPathP(): Promise<GraphTraversal>;
-      // public default org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal<S, E> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal.dedup(org.apache.tinkerpop.gremlin.process.traversal.Scope)
-      dedup(arg0: Scope): GraphTraversal;
-      dedupP(arg0: Scope): Promise<GraphTraversal>;
-      // public default org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal<S, E> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal.dedup()
-      dedup(): GraphTraversal;
-      dedupP(): Promise<GraphTraversal>;
+      // public default org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal<S, E> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal.dedup(org.apache.tinkerpop.gremlin.process.traversal.Scope,java.lang.String...)
+      dedup(arg0: Scope, ...arg1: string_t[]): GraphTraversal;
+      dedup(arg0: Scope, arg1: array_t<string_t>): GraphTraversal;
+      dedupP(arg0: Scope, ...arg1: string_t[]): Promise<GraphTraversal>;
+      dedupP(arg0: Scope, arg1: array_t<string_t>): Promise<GraphTraversal>;
+      // public default org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal<S, E> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal.dedup(java.lang.String...)
+      dedup(...arg0: string_t[]): GraphTraversal;
+      dedup(arg0: array_t<string_t>): GraphTraversal;
+      dedupP(...arg0: string_t[]): Promise<GraphTraversal>;
+      dedupP(arg0: array_t<string_t>): Promise<GraphTraversal>;
       // public default org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal<S, E> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal.drop()
       drop(): GraphTraversal;
       dropP(): Promise<GraphTraversal>;
@@ -13187,11 +13196,6 @@ declare module Java {
       // public default <E2> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal<S, E2> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal.map(java.util.function.Function<org.apache.tinkerpop.gremlin.process.traversal.Traverser<E>, E2>)
       map(arg0: Function): GraphTraversal;
       mapP(arg0: Function): Promise<GraphTraversal>;
-      // public default <E2> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal<S, java.util.Map<java.lang.String, E2>> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal.match(java.lang.String,org.apache.tinkerpop.gremlin.process.traversal.Traversal<?, ?>...)
-      match(arg0: string_t, ...arg1: Traversal[]): GraphTraversal;
-      match(arg0: string_t, arg1: array_t<Traversal>): GraphTraversal;
-      matchP(arg0: string_t, ...arg1: Traversal[]): Promise<GraphTraversal>;
-      matchP(arg0: string_t, arg1: array_t<Traversal>): Promise<GraphTraversal>;
       // public default <E2> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal<S, java.util.Map<java.lang.String, E2>> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal.match(org.apache.tinkerpop.gremlin.process.traversal.Traversal<?, ?>...)
       match(...arg0: Traversal[]): GraphTraversal;
       match(arg0: array_t<Traversal>): GraphTraversal;
@@ -13424,6 +13428,9 @@ declare module Java {
       // public default java.util.Set<E> org.apache.tinkerpop.gremlin.process.traversal.Traversal.toSet()
       toSet(): Set;
       toSetP(): Promise<Set>;
+      // public default java.util.stream.Stream<E> org.apache.tinkerpop.gremlin.process.traversal.Traversal.toStream()
+      toStream(): object_t;
+      toStreamP(): Promise<object_t>;
       // public default org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal<S, org.apache.tinkerpop.gremlin.structure.Vertex> org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal.toV(org.apache.tinkerpop.gremlin.structure.Direction)
       toV(arg0: Direction): GraphTraversal;
       toVP(arg0: Direction): Promise<GraphTraversal>;
@@ -17578,6 +17585,9 @@ declare module Java {
       // public default java.util.Set<E> org.apache.tinkerpop.gremlin.process.traversal.Traversal.toSet()
       toSet(): Set;
       toSetP(): Promise<Set>;
+      // public default java.util.stream.Stream<E> org.apache.tinkerpop.gremlin.process.traversal.Traversal.toStream()
+      toStream(): object_t;
+      toStreamP(): Promise<object_t>;
       // public default java.util.Optional<E> org.apache.tinkerpop.gremlin.process.traversal.Traversal.tryNext()
       tryNext(): object_t;
       tryNextP(): Promise<object_t>;
@@ -17707,6 +17717,9 @@ declare module Java {
       // public default java.util.Set<E> org.apache.tinkerpop.gremlin.process.traversal.Traversal.toSet()
       toSet(): Set;
       toSetP(): Promise<Set>;
+      // public default java.util.stream.Stream<E> org.apache.tinkerpop.gremlin.process.traversal.Traversal.toStream()
+      toStream(): object_t;
+      toStreamP(): Promise<object_t>;
       // public default java.util.Optional<E> org.apache.tinkerpop.gremlin.process.traversal.Traversal.tryNext()
       tryNext(): object_t;
       tryNextP(): Promise<object_t>;
@@ -18818,6 +18831,9 @@ declare module Java {
       // public default java.util.Set<E> org.apache.tinkerpop.gremlin.process.traversal.Traversal.toSet()
       toSet(): Set;
       toSetP(): Promise<Set>;
+      // public default java.util.stream.Stream<E> org.apache.tinkerpop.gremlin.process.traversal.Traversal.toStream()
+      toStream(): object_t;
+      toStreamP(): Promise<object_t>;
       // public java.lang.String java.lang.Object.toString()
       toString(): string;
       toStringP(): Promise<string>;
@@ -19243,6 +19259,9 @@ declare module Java {
       // public default java.util.Set<E> org.apache.tinkerpop.gremlin.process.traversal.Traversal.toSet()
       toSet(): Set;
       toSetP(): Promise<Set>;
+      // public default java.util.stream.Stream<E> org.apache.tinkerpop.gremlin.process.traversal.Traversal.toStream()
+      toStream(): object_t;
+      toStreamP(): Promise<object_t>;
       // public java.lang.String java.lang.Object.toString()
       toString(): string;
       toStringP(): Promise<string>;
@@ -24448,9 +24467,9 @@ declare module Java {
       // public abstract void org.apache.tinkerpop.gremlin.structure.Transaction.commit()
       commit(): void;
       commitP(): Promise<void>;
-      // public abstract <G> G org.apache.tinkerpop.gremlin.structure.Transaction.create()
-      create(): Graph;
-      createP(): Promise<Graph>;
+      // public abstract <G> G org.apache.tinkerpop.gremlin.structure.Transaction.createThreadedTx()
+      createThreadedTx(): Graph;
+      createThreadedTxP(): Promise<Graph>;
       // public abstract boolean org.apache.tinkerpop.gremlin.structure.Transaction.isOpen()
       isOpen(): boolean;
       isOpenP(): Promise<boolean>;
@@ -24821,9 +24840,9 @@ declare module Java {
       // public abstract void org.apache.tinkerpop.gremlin.structure.Transaction.commit()
       commit(): void;
       commitP(): Promise<void>;
-      // public abstract <G> G org.apache.tinkerpop.gremlin.structure.Transaction.create()
-      create(): Graph;
-      createP(): Promise<Graph>;
+      // public abstract <G> G org.apache.tinkerpop.gremlin.structure.Transaction.createThreadedTx()
+      createThreadedTx(): Graph;
+      createThreadedTxP(): Promise<Graph>;
       // public boolean java.lang.Object.equals(java.lang.Object)
       equals(arg0: object_t): boolean;
       equalsP(arg0: object_t): Promise<boolean>;
